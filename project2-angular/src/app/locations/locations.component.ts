@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '../models/Location';
-import { ZVRPubLocationsService } from '../zvrpub-locations.service';
-import { SlicePipe } from '../../../node_modules/@angular/common';
 import { ZVRPubapiService } from '../zvrpubapi.service';
 
 @Component({
@@ -19,7 +17,6 @@ export class LocationsComponent implements OnInit {
   }
 
   getLocations(){
-    this.api.getAllLocations((res)=>{console.log("success"); this.location = res;}, (res)=>console.log("failure"));
+    this.api.getAllLocations((res)=>{console.log("success"); debugger; this.location = res;}, (res)=>console.log("failure"));
   };
-
 }
