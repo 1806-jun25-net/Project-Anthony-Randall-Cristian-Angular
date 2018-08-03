@@ -19,7 +19,7 @@ export class DashboardComponent implements OnInit {
   }
 
   getLocations(){
-    this.api.getAllLocations((res)=>{console.log("success"); this.location = res.results;}, (res)=>console.log("failure"));
+    this.api.getAllLocations((res)=>{console.log("success"); this.location = res;}, (res)=>console.log("failure"));
   };
 
 }
