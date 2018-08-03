@@ -27,7 +27,7 @@ export class ZVRPubapiService {
     let promise = request.toPromise();
 
     promise.then((res) => {
-      this.document.location.href = "http://localhost:4200/dashboard"
+      this.document.location.href = "https://project2angular.azurewebsites.net/dashboard"
     }, (res) => this.document.location.href = "https://project2zoellnerrosariovalentin.azurewebsites.net/Account/Login");
 
   }
