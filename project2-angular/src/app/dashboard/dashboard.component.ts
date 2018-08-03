@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from '../models/Location';
+import { DashboardButton } from '../models/dashboardButton';
 import { ZVRPubLocationsService } from '../zvrpub-locations.service';
 import { SlicePipe } from '../../../node_modules/@angular/common';
 import { ZVRPubapiService } from '../zvrpubapi.service';
@@ -10,16 +10,17 @@ import { ZVRPubapiService } from '../zvrpubapi.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  location: Location[] = [];
+  dashboard: DashboardButton[] = [
+    {name: "Users"},
+    {name: "Locations"},
+    {name: "Orders"}
+  ];
 
   constructor(private api: ZVRPubapiService) { }
 
   ngOnInit() {
-    this.getLocations();
   }
 
-  getLocations(){
-    this.api.getAllLocations((res)=>{console.log("success"); this.location = res;}, (res)=>console.log("failure"));
-  };
+  
 
 }
