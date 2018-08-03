@@ -2,16 +2,16 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from '../../node_modules/rxjs';
 import { Location } from './models/Location';
+import { ZVRPubapiService } from './zvrpubapi.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ZVRPubLocationsService {
-  private locationUrl = 'https://project2zvrapi.azurewebsites.net/api/locations'
 
-  getLocations(): Observable<Location[]>{
-    return this.httpClient.get<Location[]>(this.locationUrl)
+  getLocations(){
+    this.api.getAllLocations((res)=>console.log("success"), (res)=>console.log("failure"));
   }
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private api: ZVRPubapiService) { }
 }
