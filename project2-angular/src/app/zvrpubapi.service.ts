@@ -13,17 +13,22 @@ export class ZVRPubapiService {
               @Inject(DOCUMENT) private document: any) { }
 
   submitLogin(username: string, password: string, success, failure){
-    let url = "https://project2zvrapi.azurewebsites.net/api/account/login";
-    let request = this.httpClient.post(url, {username, password}, {withCredentials: true} );
+    let url = "https://project2zvrapi.azurewebsites.net/api/account/loginmanager";
+    let request = this.httpClient.post(url, {"username": username, "userpassword": password}, {withCredentials: true} );
     let promise = request.toPromise();
 
     promise.then(success, failure);
 
-    this.goToUrl();
+    url = "https://project2zvrapi.azurewebsites.net/api/account/isadmin";
+    request = this.httpClient.post(url, {withCredentials: true});
+    promise = request.toPromise();
+
+    promise.then(success, failure);
+    
   }
 
   goToUrl() {
-    this.document.location.href = 'https://project2zoellnerrosariovalentin.azurewebsites.net/'
+    this.document.location.href = 'https://project2zvrapi.azurewebsites.net/api/account/isadmin'
   }
 
   getAllLocations(success, failure){
