@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '../models/Location';
+import { ZVRPubLocationsService } from '../zvrpub-locations.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  location: Location[] = [];
 
-  constructor() { }
+  constructor(private locationService: ZVRPubLocationsService) { }
 
   ngOnInit() {
+    this.getLocations();
+  }
+
+  getLocations(): void{
+    this.locationService.getLocations().subscribe(location => this.location)
   }
 
 }
