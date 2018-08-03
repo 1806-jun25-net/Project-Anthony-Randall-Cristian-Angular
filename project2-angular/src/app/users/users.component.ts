@@ -17,6 +17,6 @@ export class UsersComponent implements OnInit {
   }
 
   getUsers(){
-    this.api.getAllUsers((res)=>{console.log("success"); debugger; this.users = res;}, (res)=>console.log("failure"));
+    this.api.getAllUsers((res)=>{console.log("success");  this.users = res;}, (res)=>console.log("failure"));
   };
 }

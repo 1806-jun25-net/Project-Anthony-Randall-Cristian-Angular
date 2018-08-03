@@ -5,12 +5,14 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LocationsComponent } from './locations/locations.component';
 import { UsersComponent } from './users/users.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 const appRoutes: Routes =[
   {path: "login", component: LoginComponent },
   {path: "dashboard", component: DashboardComponent },
   {path: "Locations", component: LocationsComponent},
   {path: "Users", component: UsersComponent},
+  {path: "detail/:username", component: UserDetailsComponent}
 ]
 
 @NgModule({

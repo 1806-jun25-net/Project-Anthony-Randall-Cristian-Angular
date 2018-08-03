@@ -42,5 +42,13 @@ export class ZVRPubapiService {
 
     promise.then((res) => { console.log("gathered users from database"); success(res); }, (res) => console.log("failed to gather users from database"));
   }
+
+  getUserByUsername(username: string, success, failure) {
+    let url = 'https://project2zvrapi.azurewebsites.net/api/user/username?=' + username;
+    let request = this.httpClient.get(url);
+    let promise = request.toPromise();
+
+    promise.then((res)=>{console.log("gathered desired user"); success(res);}, (res)=>console.log("failed to gather desired user"));
+  }
 }
 
