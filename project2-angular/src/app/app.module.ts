@@ -11,6 +11,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LocationsComponent } from './locations/locations.component';
 import { UsersComponent } from './users/users.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { InventoryDisplayByLocationComponent } from './inventory-display-by-location/inventory-display-by-location.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     DashboardComponent,
     LocationsComponent,
     UsersComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    InventoryDisplayByLocationComponent
   ],
   imports: [
     BrowserModule,
