@@ -34,6 +34,15 @@ export class ZVRPubapiService {
     promise.then((res) => { console.log("gathered locations from database"); success(res); }, (res) => console.log("failed to gather locations from database"));
   }
 
+  getAllLocationsById(id: string,success, failure) {
+
+    let url = 'https://project2zvrapi.azurewebsites.net/api/locations/' + id;
+    let request = this.httpClient.get(url);
+    let promise = request.toPromise();
+
+    promise.then((res) => { console.log("gathered locations from database"); success(res); }, (res) => console.log("failed to gather locations from database"));
+  }
+
   getAllLocationsInventory(success, failure) {
 
     let url = 'https://project2zvrapi.azurewebsites.net/api/inventoryHasLocation'
