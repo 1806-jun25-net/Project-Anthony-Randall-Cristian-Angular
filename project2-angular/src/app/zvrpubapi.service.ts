@@ -65,5 +65,13 @@ export class ZVRPubapiService {
 
     promise.then((res)=>{console.log("retrieved inventory items"); success(res)}, (res)=>console.log("unable to retreive inventory items"));
   }
+
+  resupplyInventoryAtThisLocation(city: string, success, failture){
+    let uri = 'https://project2zvrapi.azurewebsites.net/api/inventoryHasLocation/city?=' + city;
+    let request = this.httpClient.put(uri, "");
+    let promise= request.toPromise();
+
+    promise.then((res)=>{console.log("successfully completed service method"); success(res)}, (res)=>console.log("failed to do anything with the inner method"))
+  }
 }
 
