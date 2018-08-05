@@ -16,7 +16,7 @@ const appRoutes: Routes =[
   {path: "Users", component: UsersComponent},
   {path: "detail/:username", component: UserDetailsComponent},
   {path: "inventory/:city", component: InventoryDisplayByLocationComponent},
-  {path: 'Order', component: OrderComponent }
+  {path: 'Orders', component: OrderComponent }
 ]
 
 @NgModule({

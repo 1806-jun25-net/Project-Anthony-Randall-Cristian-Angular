@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ZVRPubapiService } from '../zvrpubapi.service';
 import { Orders } from '../models/Orders';
+import { User } from '../models/user';
 
 @Component({
   selector: 'app-order',
@@ -9,6 +10,7 @@ import { Orders } from '../models/Orders';
 })
 export class OrderComponent implements OnInit {
   Orders:Orders [] = [];
+  Users:User[]=[];
   constructor(private api: ZVRPubapiService) { }
 
   ngOnInit() {
@@ -17,6 +19,10 @@ export class OrderComponent implements OnInit {
   }
   getOrders(){
     console.log("enter get Order")
-    this.api.getAllOrders((res)=> {console.log("success");  this.Orders = res}, (res)=> console.log("failure"))
+    this.api.getAllOrders((res)=> {console.log("success");  
+    this.Orders = res;  this.api.getAllUsers((res)=> {console.log("success"); 
+    this.Users = res}, (res)=> console.log("failure")) }, (res)=> console.log("failure"))
+   
+
   }
 }
