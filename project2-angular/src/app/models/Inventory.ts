@@ -1,5 +1,5 @@
 export class Inventory{
     id: number
-    itemId:number
+    inventoryId:number
     quantity:number
 }
