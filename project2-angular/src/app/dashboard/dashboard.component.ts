@@ -14,8 +14,7 @@ export class DashboardComponent implements OnInit {
   dashboard: DashboardButton[] = [
     {name: "Users"},
     {name: "Locations"},
-    {name: "Orders"},
-    {name : "inventory-display-by-location"}
+    {name: "Orders"}
   ];
 
   constructor(private api: ZVRPubapiService) { }
