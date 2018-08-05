@@ -29,6 +29,6 @@ export class InventoryDisplayByLocationComponent implements OnInit {
 
   resupplyInventory(){
     let city = this.route.snapshot.paramMap.get("city");
-    this.api.resupplyInventoryAtThisLocation(city, (res)=>console.log("successfully resupplied location"), (res)=>console.log("inventory has not been resupplied"))
+    this.api.resupplyInventoryAtThisLocation(city, (res)=>{console.log("successfully resupplied location"), window.location.reload()}, (res)=>console.log("inventory has not been resupplied"))
   }
 }
