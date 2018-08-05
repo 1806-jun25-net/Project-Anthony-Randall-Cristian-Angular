@@ -3,7 +3,7 @@
 
   <ul class="search-result">
     <a *ngFor="let user of users" class="col-1-4" routerLink="/detail/{{user.username}}">
-      <div class="module location">
+      <div class="module user">
         <h4>{{user.username}}</h4>
       </div>
     </a>

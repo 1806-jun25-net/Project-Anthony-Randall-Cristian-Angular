@@ -6,13 +6,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LocationsComponent } from './locations/locations.component';
 import { UsersComponent } from './users/users.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { InventoryDisplayByLocationComponent } from './inventory-display-by-location/inventory-display-by-location.component';
 
 const appRoutes: Routes =[
   {path: "login", component: LoginComponent },
   {path: "dashboard", component: DashboardComponent },
   {path: "Locations", component: LocationsComponent},
   {path: "Users", component: UsersComponent},
-  {path: "detail/:username", component: UserDetailsComponent}
+  {path: "detail/:username", component: UserDetailsComponent},
+  {path: "inventory/:city", component: InventoryDisplayByLocationComponent}
 ]
 
 @NgModule({

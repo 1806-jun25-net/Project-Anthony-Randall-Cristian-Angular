@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Location } from '../models/Location';
 import { ZVRPubapiService } from '../zvrpubapi.service';
 import { Inventory } from '../models/Inventory';
@@ -11,38 +11,19 @@ import { ActivatedRoute } from '../../../node_modules/@angular/router';
   styleUrls: ['./inventory-display-by-location.component.css']
 })
 export class InventoryDisplayByLocationComponent implements OnInit {
-  location: Location[] = [];
+  @Input() loc: Location;
   inventory: Inventory[] = [];
-  locationHasInventory: LocationHasInventory[] = [];
-  city: string = "";
+
   constructor(
     private api: ZVRPubapiService,
     private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.getLocations();
-    this.getInventory();
-    this.getInventoryHasLocation();
+    this.getLocationInventory();
   }
-
-  getLocations(){
-    this.api.getAllLocations((res)=>{console.log("success");  this.location = res;}, (res)=>console.log("failure"));
-   
-  };
   
-  getLocationsById(){
-    let locationId = this.route.snapshot.paramMap.get("id")
-    this.api.getAllLocationsById(locationId, (res)=>{console.log("success");  this.location = res;}, (res)=>console.log("failure"));
-  };
-  
-  
-    
-  getInventory(){
-    this.api.getAllInventory((res)=>{console.log("success");  this.inventory = res;}, (res)=>console.log("failure"));
-  };
-
-  getInventoryHasLocation(){
-    this.api.getAllLocationsInventory((res)=>{console.log("success");  this.locationHasInventory = res;}, (res)=>console.log("failure"));
-  };
-
+  getLocationInventory(){
+    let city = this.route.snapshot.paramMap.get("city");
+    this.api.getInventoryFromCityName(city, (res)=>{console.log("overall success"); this.inventory = res}, (res)=>console.log("failed to gather location"))
+  }
 }

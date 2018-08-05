@@ -14,12 +14,12 @@ export class ZvrpubInventoryDisplayByLocationService {
     this.api.getAllLocations((res)=>success(res), (res)=>console.log("failure"));
   }
   
-  getLocationsInventory(success){
-    this.api.getAllLocationsInventory((res)=>success(res), (res)=>console.log("failure"));
-  }
+  // getLocationsInventory(success){
+  //   this.api.getAllLocationsInventory((res)=>success(res), (res)=>console.log("failure"));
+  // }
 
-  getInventory(success){
-    this.api.getAllInventory((res)=>success(res), (res)=>console.log("failure"));
-  }
+  // getInventory(success){
+  //   this.api.getAllInventory((res)=>success(res), (res)=>console.log("failure"));
+  // }
   constructor(private api: ZVRPubapiService) { }
 }

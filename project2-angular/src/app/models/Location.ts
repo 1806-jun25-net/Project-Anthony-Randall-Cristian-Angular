@@ -1,5 +1,5 @@
 export class Location{
-    id: string
+    id: number
     address: string
     postalCode: string
     state: string

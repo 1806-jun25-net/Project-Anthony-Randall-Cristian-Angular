@@ -1,5 +1,5 @@
 export class Inventory{
-    id: string
-    name:string
-    price:string
+    id: number
+    itemId:number
+    quantity:number
 }
