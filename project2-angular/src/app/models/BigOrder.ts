@@ -2,7 +2,7 @@ export class BigOrder {
     orderId: number; 
     orderTime: Date; 
     cost: number;
-    username: string;
-    firstName: string;
+    user: string;
+    location: string;
     lastName: string;
 }

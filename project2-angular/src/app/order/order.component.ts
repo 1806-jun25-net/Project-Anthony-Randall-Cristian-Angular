@@ -22,7 +22,7 @@ export class OrderComponent implements OnInit {
     this.api.getAllOrders((res)=> {console.log("success");  
     this.Orders = res;  this.api.getAllUsers((res)=> {console.log("success"); 
     this.Users = res}, (res)=> console.log("failure")) }, (res)=> console.log("failure"))
-   
+ 
 
   }
 }

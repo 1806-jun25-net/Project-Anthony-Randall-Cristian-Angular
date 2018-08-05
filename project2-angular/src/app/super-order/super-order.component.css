@@ -1,0 +1,10 @@
+.center{
+    margin: auto;
+    border-radius: 5px; 
+    background-color: orange; /*randall favorite*/
+    opacity: 1;
+ }
+ tr{
+     margin-left: 10px;
+     margin-right: 10px;
+ }

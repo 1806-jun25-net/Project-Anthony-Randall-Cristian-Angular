@@ -35,7 +35,7 @@ export class ZVRPubapiService {
   }
 
   getAllOrders(success, failure){
-     let url = "https://project2zvrapi.azurewebsites.net/api/Orders" 
+     let url = "https://project2zvrapi.azurewebsites.net/api/SuperOrder" 
      let request = this.httpClient.get(url);
      let promise = request.toPromise();
 

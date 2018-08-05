@@ -13,6 +13,7 @@ import { UsersComponent } from './users/users.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { InventoryDisplayByLocationComponent } from './inventory-display-by-location/inventory-display-by-location.component';
 import { OrderComponent } from './order/order.component';
+import { SuperOrderComponent } from './super-order/super-order.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { OrderComponent } from './order/order.component';
     UsersComponent,
     UserDetailsComponent,
     InventoryDisplayByLocationComponent,
-    OrderComponent
+    OrderComponent,
+    SuperOrderComponent
   ],
   imports: [
     BrowserModule,
