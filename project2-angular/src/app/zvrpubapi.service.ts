@@ -71,7 +71,7 @@ export class ZVRPubapiService {
     let request = this.httpClient.put(uri, "");
     let promise= request.toPromise();
 
-    promise.then((res)=>console.log("successfully completed service method"), (res)=>console.log("failed to do anything with the inner method"))
+    promise.then((res)=>{console.log("successfully completed service method"); success(res)}, (res)=>console.log("failed to do anything with the inner method"))
   }
 }
 
