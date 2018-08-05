@@ -12,6 +12,7 @@ import { LocationsComponent } from './locations/locations.component';
 import { UsersComponent } from './users/users.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { InventoryDisplayByLocationComponent } from './inventory-display-by-location/inventory-display-by-location.component';
+import { OrderComponent } from './order/order.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { InventoryDisplayByLocationComponent } from './inventory-display-by-loca
     LocationsComponent,
     UsersComponent,
     UserDetailsComponent,
-    InventoryDisplayByLocationComponent
+    InventoryDisplayByLocationComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,

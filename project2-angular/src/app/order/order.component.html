@@ -1,0 +1,23 @@
+
+<p>testing route</p>
+  <div class="module Orders">
+      your time of order: 
+      <div class="center">
+      <table class="center"> 
+          <tr>
+            <th>orderTime</th>
+            <th>cost</th>
+            <th>userId</th>
+          </tr> 
+  
+          <tr *ngFor="let orders of Orders">
+            <td> {{orders.orderTime}}</td>
+            <td>{{orders.cost}}</td>
+            <td>{{orders.userId}}</td>
+          </tr>
+        </table>
+      </div>
+    
+  </div>
+
+
