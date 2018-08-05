@@ -2,12 +2,12 @@
 
 <table id="table">
   <thead>
-    <th class="head">Item Id</th>
+    <th class="head">Ingredient Name</th>
     <th class="head">Quantity</th>
   </thead>
 
   <tbody *ngFor="let item of inventory">
-    <td class="entry">{{item.inventoryId}}</td>
+    <td class="entry">{{item.ingredientName}}</td>
     <td class="entry">{{item.quantity}}</td>
   </tbody>
 </table>
