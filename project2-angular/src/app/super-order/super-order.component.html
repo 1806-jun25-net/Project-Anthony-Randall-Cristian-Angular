@@ -1,7 +1,7 @@
 
 
-    <div>
-    <table class="center" > 
+    <div class="container">
+    <table class="table table-striped" > 
         <thead>
           <th> cost</th>
           <th>user </th>
@@ -10,7 +10,7 @@
          
         </thead> 
 
-        <tbody *ngFor="let order of bigOrde"> 
+        <tbody  *ngFor="let order of bigOrde"> 
           <td> {{order.cost}}</td>
           <td>{{order.user}}</td>
          <td>{{order.orderTime}}</td>

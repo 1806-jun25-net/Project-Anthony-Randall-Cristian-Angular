@@ -2,6 +2,19 @@
     text-align-last: auto;
     padding: 10px;
 }
+.container{
+    border-radius: 10px;
+   background-color: aqua;
+   width: 500px; 
+   height:250px; 
+   
+   
+}
+.form-control{
+    width: 400px;
+    margin: auto; 
+
+}
 
 #button{
     padding: 10px;
