@@ -13,7 +13,7 @@ import { SuperOrderComponent } from './super-order/super-order.component';
 
 const appRoutes: Routes =[
   {path: "", component: LoginComponent },
-  {path: "dashboard", component: DashboardComponent },
+  {path: "https://project2angular.azurewebsites.net/dashboard", component: DashboardComponent },
   {path: "Locations", component: LocationsComponent},
   {path: "Users", component: UsersComponent},
   {path: "detail/:username", component: UserDetailsComponent},
