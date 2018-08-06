@@ -16,10 +16,7 @@ bigOrde: BigOrder;
     this.getOrders();
   }
 
-  onClickEventLookMomImSortin(){
-    this.getOrders(); 
-    this.bigOrde.user
-  }
+ 
   
   getOrders(){
     console.log("enter get Order")
