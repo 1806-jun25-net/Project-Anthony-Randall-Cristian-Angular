@@ -12,7 +12,7 @@ import { BigOrder } from './models/BigOrder';
 import { SuperOrderComponent } from './super-order/super-order.component';
 
 const appRoutes: Routes =[
-  {path: "", component: LoginComponent },
+  {path: "login", component: LoginComponent },
   {path: "dashboard", component: DashboardComponent },
   {path: "Locations", component: LocationsComponent},
   {path: "Users", component: UsersComponent},

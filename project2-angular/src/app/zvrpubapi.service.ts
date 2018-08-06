@@ -16,11 +16,11 @@ export class ZVRPubapiService {
 
   submitLogin(username: string, password: string, success, failure) {
     let url = "https://project2zvrapi.azurewebsites.net/api/account/loginmanager";
-    let request = this.httpClient.post(url, { "username": username, "userpassword": password }, { withCredentials: true});
+    let request = this.httpClient.post(url, { "username": username, "userpassword": password });
     let promise = request.toPromise();
 
     promise.then((res) => {
-      this.document.location.href = "https://project2angular.azurewebsites.net/dashboard"
+      this.document.location.href = "http://localhost:4200/dashboard"
     }, (res) => this.document.location.href = "https://project2zoellnerrosariovalentin.azurewebsites.net/Account/Login");
 
   }
