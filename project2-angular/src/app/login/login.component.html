@@ -1,15 +1,22 @@
+
+<div class="container">
 <h2>
   Please Log In!
 </h2>
 
+
 <div class="inputField">
-  <span>Username: </span><input type="text" [(ngModel)]="Username"/>
+  <span  >Username: </span> <br/>
+  <input  class="form-control"  type="text" [(ngModel)]="Username"/>
 </div>
 
 <div>
-  <span class="inputField">Password: </span><input type="password" [(ngModel)]="Password">
+  <span  class="form-control" class="inputField">Password:</span> <br/>
+  <input class="form-control" id="move_to_the_left_Already" type="password" [(ngModel)]="Password">
 </div>
 
 <div id="button">
-  <button (click)="submit()">Submit</button>
+  <button class="btn btn-default" (click)="submit()">Submit</button>
+</div>
+
 </div>

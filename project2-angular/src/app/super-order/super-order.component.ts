@@ -16,10 +16,16 @@ bigOrde: BigOrder;
     this.getOrders();
   }
 
+  onClickEventLookMomImSortin(){
+    this.getOrders(); 
+    this.bigOrde.user
+  }
+  
   getOrders(){
     console.log("enter get Order")
     this.api.getAllOrders((res)=> {console.log("success"); this.bigOrde = res}  , (res)=> console.log("failure"));
 
   }
+ 
 
 }
