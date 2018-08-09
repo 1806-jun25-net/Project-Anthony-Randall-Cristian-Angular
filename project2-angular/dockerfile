@@ -13,7 +13,7 @@ WORKDIR /app
 # RUN mkdir /usr/src/app
 # WORKDIR /usr/src/app
 
-#COPY package.json package-lock.json ./
+COPY package.json package-lock.json ./
 RUN npm install
 
 
@@ -28,7 +28,7 @@ RUN npm run build
 # RUN npm install
 # RUN npm install -g @angular/cli@1.7.1 --unsafe
 
-from nginx:1.14 as deploy 
+FROM nginx:1.14 as deploy 
 
 # add app
 run rm -rf /usr/share/nginx/html/*
